@@ -34,8 +34,9 @@ client.on('messageCreate', message => {
                 message.channel.send('Terlalu besar')
             }else if (parseInt(message.content) < soal) {
                 message.channel.send('Terlalu kecil');
-            }else if (message.content === 'Nyerah') {
+            }else if (message.content === 'Nyerah' || message.content === 'nyerah') {
                 message.channel.send('Jawabannya adalah ' + soal)
+                soal = Math.round(Math.random() * 20);
             }
     
 });
